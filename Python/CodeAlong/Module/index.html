@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Python Web Server</title>
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 40%;
+            height: auto;
+            cursor: pointer;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="center">
+    <h1>Python Web Server</h1>
+    <img id="randomImage" src="" alt="Random Image">
+</div>
+
+<script>
+    function loadRandomImage() {
+        const images = Array.from({length: 10}, (v, k) => `img/python-${(k + 1).toString().padStart(2, '0')}.png`);
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const imgElement = document.getElementById('randomImage');
+        imgElement.src = images[randomIndex];
+    }
+
+    window.onload = function() {
+        loadRandomImage();
+        document.getElementById('randomImage').addEventListener('click', loadRandomImage);
+    };
+</script>
+
+</body>
+</html>
