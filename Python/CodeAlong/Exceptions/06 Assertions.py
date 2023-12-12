@@ -91,3 +91,23 @@ def better_user_input():
     if not number.isdigit():
         raise ValueError("Input must be a number!")
     return int(number)
+
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
+# ## Workshop: Assertions
+#
+# Das Programm `valid_mail.py` fragt den Benutzer nach einer E-Mail-Adresse und
+# gibt diese wieder aus, wenn sie in der Liste `valid_mail_addresses` enthalten
+# ist.
+#
+# Bei ungültigen Eingaben wird eine Exception ausgelöst.
+#
+# - Führen Sie das Programm mit verschiedenen Eingaben aus und beobachten Sie das
+#   Verhalten.
+# - Wie können Sie das Programm dazu bringen, auch ungültige Eingaben zu akzeptieren?
+# - Schreiben Sie das Programm so um, das dies nicht mehr möglich ist.
+
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+
+# %%

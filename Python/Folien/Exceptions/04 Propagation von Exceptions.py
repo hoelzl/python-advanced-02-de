@@ -151,7 +151,7 @@ outer_caller_with_try_v0(ErrorType.VALUE)
 # outer_caller_v0(ErrorType.VALUE)
 
 
-# %% tags=["keep"]
+# %% tags=["keep", "subslide"] slideshow={"slide_type": "subslide"}
 def raise_and_handle_error(error_type: ErrorType):
     print("    raise_and_handle_error(): before try")
     try:
