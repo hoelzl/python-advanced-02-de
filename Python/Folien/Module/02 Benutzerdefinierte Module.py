@@ -114,7 +114,7 @@ import my_test_module
 import workshop_module_solution
 
 # %%
-workshop_module.say_hello()
+workshop_module_solution.say_hello()
 
 # %%
-workshop_module.say_bye()
+workshop_module_solution.say_bye()

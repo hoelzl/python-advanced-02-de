@@ -135,5 +135,5 @@ def our_great_app():  # noqa
     process_data(db)
     db.disconnect()
 
-# %% tags=["keep"]
+# %% tags=["start"]
 # our_great_app()

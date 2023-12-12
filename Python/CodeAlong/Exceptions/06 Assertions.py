@@ -61,39 +61,21 @@ my_var = 1
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
-# - Asserts können mit dem `-O`-Flag deaktiviert werden.
+# - Assertions können mit dem `-O`-Flag deaktiviert werden.
 
 # %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
-import subprocess
-import shutil
-
-# %% tags=["keep"]
-python_exe = shutil.which("python")
-assert python_exe
-python_exe
-
-# %% tags=["keep"]
-with open("test_assert.py") as f:
-    print(f.read())
-
-# %% tags=["keep"]
-# %less test_assert.py
+# %pycat test_assert.py
 
 # %% tags=["keep", "subslide"] slideshow={"slide_type": "subslide"}
-cp = subprocess.run([python_exe, "test_assert.py"], capture_output=True, text=True)
-print(cp.stderr)
-
+# !python test_assert.py
 
 # %% tags=["keep"]
-cp = subprocess.run(
-    [python_exe, "-O", "test_assert.py"], capture_output=True, text=True
-)
-print(cp.stderr)
+# !python -O test_assert.py
 
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
-# - Asserts sind nützlich, um Annahmen über den Programmzustand zu dokumentieren.
+# - Assertions sind nützlich, um Annahmen über den Programmzustand zu dokumentieren.
 # - Sie sind aber nicht dazu gedacht, Fehler in Eingaben abzufangen.
 
 # %% tags=["keep"]

@@ -148,5 +148,5 @@ def our_great_app():  # noqa
         db.disconnect()
 
 
-# %% tags=["keep"]
-# our_great_app()
+# %% tags=["alt"]
+our_great_app()
