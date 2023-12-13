@@ -74,10 +74,13 @@ my_test_module.my_variable
 import importlib
 
 # %% tags=["keep"]
-import my_test_module
+importlib.reload(my_test_module)
 
 # %% tags=["keep"]
-importlib.reload(my_test_module)
+my_test_module.my_function()
+
+# %% tags=["keep"]
+my_test_module.my_variable
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
@@ -90,7 +93,7 @@ importlib.reload(my_test_module)
 # %load_ext autoreload
 # %autoreload 2
 
-# %%
+# %% tags=["keep"]
 import my_test_module
 
 
@@ -98,19 +101,10 @@ import my_test_module
 #
 # - Was passiert jetzt, wenn wir die Datei `my_test_module.py` ändern?
 
-# %%
+# %% tags=["keep"]
 my_test_module.my_function()
 
-# %%
-my_test_module.my_variable
-
-# %%
-import my_test_module
-
-# %%
-my_test_module.my_function()
-
-# %%
+# %% tags=["keep"]
 my_test_module.my_variable
 
 

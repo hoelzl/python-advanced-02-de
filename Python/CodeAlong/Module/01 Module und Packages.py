@@ -21,7 +21,7 @@
 # <div style="text-align:center;">Dr. Matthias Hölzl</div>
 # <br/>
 # <!-- 01 Module und Packages.py -->
-# <!-- python_courses/slides/module_180_modules_and_packages/topic_110_a5_modules.py -->
+# <!-- python_courses/slides/module_180_modules_and_packages/topic_110_modules.py -->
 
 # %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
 #

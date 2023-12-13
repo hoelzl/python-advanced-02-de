@@ -87,7 +87,7 @@
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
-# ### Importieren aller Funktionen mit `*`
+# ### Importieren aller Namen mit `*`
 #
 # - Wir können alle Namen eines Moduls mit `*` importieren
 # - Syntax: `from <modulname> import *`
@@ -96,7 +96,7 @@
 # - Der Name des Moduls wird nicht importiert
 # - Außer zum interaktiven Experimentieren sollten wir dies vermeiden
 
-# %%
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
 
 
 # %%

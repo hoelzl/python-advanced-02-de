@@ -27,7 +27,12 @@
 #
 # - Wir können Python-Module auch direkt von der Kommandozeile ausführen
 # - Dazu verwenden wir das Kommando `python -m <modulname>`
-# - Beispiel: `python -m my_test_module`
+# - Im Gegensatz zu `python <modulname>.py` wird das Modul auch gefunden, wenn
+#   es nicht im aktuellen Verzeichnis liegt
+
+# %%
+
+# %%
 
 # %%
 
