@@ -43,10 +43,6 @@ if my_var != 1:
 # %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
 # assert my_var == 2
 
-# %% tags=["keep"]
-# if my_var != 2:
-#     raise AssertionError()
-
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
 # Assert mit optionalem Fehler-Text:
@@ -60,10 +56,6 @@ if my_var != 1:
 
 # %% tags=["keep", "subslide"] slideshow={"slide_type": "subslide"}
 # assert my_var == 2, "my_var should be 2"
-
-# %% tags=["keep"]
-# if my_var != 2:
-#     raise AssertionError("my_var should be 2")
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
