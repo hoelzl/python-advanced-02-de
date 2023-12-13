@@ -35,6 +35,15 @@
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
+# - Benutzerdefinierte Exceptions können wie alle anderen Exceptions erzeugt und
+#   behandelt werden.
+
+# %%
+
+# %%
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
 # - Exceptions können mit beliebig vielen Argumenten initialisiert werden.
 # - Die Werte der Argumente können mit `args` abgefragt werden.
 
@@ -42,12 +51,24 @@
 
 # %%
 
+# %%
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
+# - Benutzerdefinierte Exceptions können genau wie alle anderen Exceptions
+#   ausgelöst und behandelt werden.
+
+# %%
+
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
 # ## Behandeln von Unterklassen einer Exception
 #
 # - Eine `except`-Klausel für eine Klasse `A` behandelt auch alle Unterklassen von `A`
+# - Das gilt auch für benutzerdefinierte Exceptions
 
 # %%
 
@@ -62,3 +83,26 @@
 # - Beispiele:
 #   - `FileNotFoundError` statt `OSError`
 #   - `DimensionMismatchError` statt `ValueError` für physikalische Berechnungen
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
+# ## Workshop: Benutzerdefinierte Exceptions
+#
+# - Schreiben Sie eine Funktion `read_email_from_user()`, die eine E-Mail-Adresse
+#   vom Benutzer einliest.
+# - Die Funktion soll eine benutzerdefinierte Exception `InvalidEmailError`
+#   auslösen, wenn die E-Mail-Adresse nicht in der Liste `valid_mail_addresses`
+#   enthalten ist.
+
+# %% tags=["keep"]
+valid_mail_addresses = [
+    "joe@example.com",
+    "jane@example.com",
+    "jill@example.com",
+]
+
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+
+# %%
+
+# %%

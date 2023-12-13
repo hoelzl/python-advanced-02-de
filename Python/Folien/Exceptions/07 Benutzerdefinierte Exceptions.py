@@ -38,18 +38,43 @@ class MyValueError(ValueError):
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
 #
+# - Benutzerdefinierte Exceptions können wie alle anderen Exceptions erzeugt und
+#   behandelt werden.
+
+# %%
+error = MyValueError("Oops!")
+error
+
+# %%
+print(error)
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
 # - Exceptions können mit beliebig vielen Argumenten initialisiert werden.
 # - Die Werte der Argumente können mit `args` abgefragt werden.
 
 # %%
-error = MyValueError("Oops!")
-print(error)
-error.args
+error = MyValueError("Oops!", 1, 2, 3)
 
 # %%
-error = MyValueError("Oops!", 1, 2, 3)
 print(error)
+
+# %%
 error.args
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
+# - Benutzerdefinierte Exceptions können genau wie alle anderen Exceptions
+#   ausgelöst und behandelt werden.
+
+# %%
+raise MyValueError("Oops!")
+
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+try:
+    raise MyValueError("Oops!")
+except MyValueError as error:
+    print(f"Caught {type(error).__name__}: {error}")
 
 
 # %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
@@ -57,6 +82,7 @@ error.args
 # ## Behandeln von Unterklassen einer Exception
 #
 # - Eine `except`-Klausel für eine Klasse `A` behandelt auch alle Unterklassen von `A`
+# - Das gilt auch für benutzerdefinierte Exceptions
 
 # %%
 try:
@@ -75,3 +101,37 @@ except ValueError as error:
 # - Beispiele:
 #   - `FileNotFoundError` statt `OSError`
 #   - `DimensionMismatchError` statt `ValueError` für physikalische Berechnungen
+
+# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+#
+# ## Workshop: Benutzerdefinierte Exceptions
+#
+# - Schreiben Sie eine Funktion `read_email_from_user()`, die eine E-Mail-Adresse
+#   vom Benutzer einliest.
+# - Die Funktion soll eine benutzerdefinierte Exception `InvalidEmailError`
+#   auslösen, wenn die E-Mail-Adresse nicht in der Liste `valid_mail_addresses`
+#   enthalten ist.
+
+# %% tags=["keep"]
+valid_mail_addresses = [
+    "joe@example.com",
+    "jane@example.com",
+    "jill@example.com",
+]
+
+
+# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+class InvalidEmailError(ValueError):
+    pass
+
+
+# %%
+def read_email_from_user():
+    email = input("Enter your email address: ")
+    if email not in valid_mail_addresses:
+        raise InvalidEmailError(f"Invalid email address {email!r}.")
+    return email
+
+
+# %%
+read_email_from_user()
