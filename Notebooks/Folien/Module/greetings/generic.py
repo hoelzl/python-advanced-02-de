@@ -1,4 +1,4 @@
-from .formal import formal_names, say_greetings
+from . import formal
 from .informal import familiar_names, say_hi
 
 
@@ -14,7 +14,7 @@ def greet(name=""):
     """Greets a person."""
     if name in familiar_names:
         say_hi(name)
-    elif name in formal_names:
-        say_greetings(name)
+    elif name in formal.formal_names:
+        formal.say_greetings(name)
     else:
         say_hello(name)
