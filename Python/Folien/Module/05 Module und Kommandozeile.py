@@ -1,18 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.15.2
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # <div style="text-align:center; font-size:200%;">
 #  <b>Module und Kommandozeile</b>
@@ -23,7 +9,7 @@
 # <!-- 05 Module und Kommandozeile.py -->
 # <!-- python_courses/slides/module_180_modules_and_packages/topic_150_modules_and_cli.py -->
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Wir können Python-Module auch direkt von der Kommandozeile ausführen
 # - Dazu verwenden wir das Kommando `python -m <modulname>`
@@ -39,7 +25,7 @@
 # %%
 # !python -m pip --version
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Dabei ist es zweckmäßig, wenn das Modul eine `main()` Funktion enthält, die
 #   ausgeführt wird
@@ -49,7 +35,7 @@
 #     ausgeführt wird (also nicht importiert wird)
 #   - `__name__` ist der Modulname, wenn das Modul importiert wird
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Um die `main()` Funktion nur auszuführen, wenn das Modul direkt ausgeführt
 #   wird, können wir folgenden Code verwenden:
@@ -70,7 +56,7 @@ if __name__ == "__main__":
 # %%
 import main_test
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Workshop: Modul und Kommandozeile
 #
@@ -84,8 +70,8 @@ import main_test
 #   ausgeführt werden
 
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 # !python -m cli_module_solution
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 import cli_module_solution

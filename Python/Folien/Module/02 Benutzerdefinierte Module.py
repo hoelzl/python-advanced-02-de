@@ -1,18 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.15.2
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # <div style="text-align:center; font-size:200%;">
 #  <b>Benutzerdefinierte Module</b>
@@ -23,7 +9,7 @@
 # <!-- 02 Benutzerdefinierte Module.py -->
 # <!-- python_courses/slides/module_180_modules_and_packages/topic_120_user_defined_modules.py -->
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Benutzerdefinierte Module
 #
@@ -34,33 +20,33 @@
 # - Standardmäßig ist das aktuelle Verzeichnis im Suchpfad enthalten.
 #  - Jupyter Notebooks lassen sich nicht (ohne zusätzliche Pakete) als Module laden.
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 import os
 
-# %% [markdown] lang="de"
+# %% [markdown]
 #
 # Aktuelles Verzeichnis:
 
-# %% tags=["keep"]
+# %%
 os.getcwd()
 
-# %% [markdown] lang="de"
+# %% [markdown]
 #
 # Welche Dateien befinden sich im aktuellen Verzeichnis?
 
-# %% tags=["keep"]
+# %%
 for filename in os.listdir(os.getcwd()):
     if filename[-3:] == ".py":
         print(filename)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # Anzeigen des Quellcodes von `my_test_module.py`
 
-# %% tags=["keep"]
+# %%
 # # %pycat my_test_module.py
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Laden von Modulen
 #
@@ -68,7 +54,7 @@ for filename in os.listdir(os.getcwd()):
 # - Top-Level Code wird ausgeführt
 # - Das Modul wird in einem Cache gespeichert
 
-# %% tags=["keep"]
+# %%
 import my_test_module
 
 # %%
@@ -78,7 +64,7 @@ my_test_module.add1(2)
 # %%
 # add1
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Top-Level Code
 #
@@ -98,7 +84,7 @@ __name__
 # %%
 import my_test_module
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Workshop: Modul
 #

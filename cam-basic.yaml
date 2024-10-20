@@ -3,6 +3,8 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.11
+  - aio-pika
+  - aiofiles
   - appdirs
   - attrs
   - autopep8
@@ -16,6 +18,9 @@ dependencies:
   - copier
   - cython
   - cytoolz
+  - debugpy
+  - dramatiq
+  - faststream
   - flake8
   - gh
   - hydra-core
@@ -28,6 +33,7 @@ dependencies:
   # - jupyterlite-core-with-lab
   - jupytext
   - lark
+  - loguru
   - matplotlib
   - mypy
   - nbconvert
@@ -41,6 +47,7 @@ dependencies:
   - papermill
   - pdoc
   - pip
+  - pika
   - platformdirs
   - pyarrow
   - pydantic
@@ -48,16 +55,20 @@ dependencies:
   # - pylance
   - pypandoc
   - pytest
+  - pytest-asyncio
   - pytest-cov
   - pytest-mock
   - python-build
   - python-dotenv
+  - redis-py
   - requests
+  - ruff
   - scikit-build
   - scikit-learn
   - scipy
   - seaborn
   - sqlalchemy>=2
+  - tenacity
   - tomli
   - tomli-w
   - tornado>=6.1
@@ -66,3 +77,4 @@ dependencies:
   - typer
   - uvicorn
   - watchdog
+  - websockets

@@ -7,8 +7,8 @@ channels:
   - fastai
 dependencies:
   - python>=3.11
-  # - cuda==11.7
-  # - cudnn
+  - aio-pika
+  - aiofiles
   - appdirs
   - attrs
   - autopep8
@@ -16,17 +16,22 @@ dependencies:
   - black
   - bump2version
   - cattrs
+  - cxx-compiler
   - click
   - configurator
   - cookiecutter
   - copier
+  - cuda>=12.1
   - cython
   - cytoolz
   - datasets
+  - debugpy
   # - duckdb
+  - dramatiq
   - einops
   - fastai
   - fastapi
+  - faststream
   - ffmpeg
   - flake8
   - gh
@@ -36,7 +41,9 @@ dependencies:
   - ipywidgets
   - kaggle
   - lark
+  - loguru
   - mypy
+  - nats-py
   - jinja2
   - jupyterlab>=4
   - jupyterlab_rise>=0.40.0
@@ -47,14 +54,17 @@ dependencies:
   - mypy
   - nbconvert
   - networkx
+  - ninja
   # - nbex
   - numba
   - numpy
+  - openai
   - openpyxl
   - pandas
   - pandoc
   - papermill
   - pdoc
+  - pika
   - pip
   - platformdirs
   - pyarrow
@@ -63,13 +73,16 @@ dependencies:
   - pypandoc
   # - pylance
   - pytest
+  - pytest-asyncio
   - pytest-cov
   - pytest-mock
   - python-build
   - python-dotenv
   - pytorch
-  - pytorch-cuda==11.7
+  - pytorch-cuda==12.1
+  - redis-py
   - requests
+  - ruff
   - scikit-build
   - scikit-learn
   - scipy
@@ -82,13 +95,16 @@ dependencies:
   - streamlit
   # - tensorboard
   # - tensorflow
+  - tenacity
   - timm
   - tomli
   - tomli-w
   - tornado>=6.1
-  - tox<4
-#  - tox-conda<0.10
+  - tox
+  #  - tox-conda<0.10
   - transformers>=4
   - typer
   - uvicorn
   - watchdog
+  - websockets
+  - wurlitzer

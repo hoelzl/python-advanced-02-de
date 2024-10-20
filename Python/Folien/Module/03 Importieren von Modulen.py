@@ -1,18 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.15.2
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # <div style="text-align:center; font-size:200%;">
 #  <b>Importieren von Modulen</b>
@@ -23,13 +9,13 @@
 # <!-- 03 Importieren von Modulen.py -->
 # <!-- python_courses/slides/module_180_modules_and_packages/topic_130_loading_modules.py -->
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - `import` Anweisung
 # - `from`-`import` Anweisung
 # - Umbenennen mit `as`
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Importieren mit `from`-`import`
 #
@@ -39,7 +25,7 @@
 # - Damit ist nur die importierte Funktion verfügbar
 # - Ihr Name kann direkt verwendet werden, ohne den Modulnamen voranzustellen
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 # import my_test_module
 
 # %%
@@ -54,7 +40,7 @@ from my_test_module import add1
 # %%
 # add1(2)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Wenn wir mehrere Funktionen aus einem Modul importieren, können wir sie
 #   mit Kommas trennen
@@ -71,7 +57,7 @@ multiply_by_2(2)
 # %%
 perform_complex_computation(10)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Umbenennen mit `as`
 #
@@ -87,7 +73,7 @@ mm.add1(1)
 # %%
 mm.perform_complex_computation(17)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Wir können auch Funktionen umbenennen
 
@@ -98,7 +84,7 @@ from my_test_module import multiply_by_2 as mult2
 # %%
 mult2(4)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Importieren aller Namen mit `*`
 #
@@ -109,7 +95,7 @@ mult2(4)
 # - Der Name des Moduls wird nicht importiert
 # - Außer zum interaktiven Experimentieren sollten wir dies vermeiden
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 from my_test_module import *
 
 
@@ -120,7 +106,7 @@ multiply_by_2(3)
 # %%
 add1(3)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Workshop: Importieren von Modulen
 #
@@ -137,7 +123,7 @@ wm.say_hello()
 # %%
 wm.say_bye()
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # - Importieren Sie die Funktion `say_hello()` aus dem Modul `workshop_module`.
 # - Importieren Sie die Funktion `say_bye()` aus dem Modul `workshop_module` unter

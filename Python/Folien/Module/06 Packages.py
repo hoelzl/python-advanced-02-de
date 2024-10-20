@@ -1,18 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.15.2
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # <div style="text-align:center; font-size:200%;">
 #  <b>Packages</b>
@@ -23,11 +9,11 @@
 # <!-- 06 Packages.py -->
 # <!-- python_courses/slides/module_180_modules_and_packages/topic_200_packages.py -->
 
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # Packages (Pakete) erlauben es uns, verwandte Module zu organisieren
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Beispiel: `html` Paket
 #
@@ -37,29 +23,29 @@
 # - `html.parser` enthält einen HTML-Parser
 # - `html` selber enthält nur Funktionen `escape()` und `unescape()`
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 import html
 
-# %% tags=["keep"]
+# %%
 html.escape("<a href='test'>Test</a>")
 
-# %% tags=["keep"]
+# %%
 html.unescape("&lt;a href=&#x27;test&#x27;&gt;Test&lt;/a&gt;")
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 import html.entities
 
-# %% tags=["keep"]
+# %%
 html.entities.entitydefs["Psi"]
 
-# %% tags=["keep"]
+# %%
 html.entities.html5["Psi;"]
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 from html.parser import HTMLParser
 
 
-# %% tags=["keep"]
+# %%
 class PrintingHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         print("Start tag:", tag)
@@ -73,14 +59,14 @@ class PrintingHTMLParser(HTMLParser):
         print("Data:     ", data)
 
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 parser = PrintingHTMLParser()
 
-# %% tags=["keep"]
+# %%
 parser.feed('<div class="my-class"><a href="test">Test</a></div>')
 
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 #  ### Struktur von Packages
 #
@@ -90,13 +76,13 @@ parser.feed('<div class="my-class"><a href="test">Test</a></div>')
 #   `__init__.py` Datei
 # - Die `__init__.py` Datei kann leer sein (und ist oft leer)
 
-# %% tags=["subslide", "keep"] slideshow={"slide_type": "subslide"}
+# %%
 from dirtree import dir_tree
 
 # %%
 dir_tree("greetings")
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Struktur des `greetings` Packages
 #
@@ -107,7 +93,7 @@ dir_tree("greetings")
 # - Ordner für Sub-Packages:
 #   - `intl` mit Datei [`generic.py`](greetings/intl/generic.py)
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Namen von Packages
 #
@@ -117,7 +103,7 @@ dir_tree("greetings")
 #   - Namen sollten mit einem Kleinbuchstaben beginnen
 #   - Namen sollten keine Unterstriche enthalten
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Namen des `greetings` Packages
 #
@@ -128,7 +114,7 @@ dir_tree("greetings")
 # - Ordner für Sub-Packages:
 #   - `intl` mit Modul [`greetings.intl.generic`](greetings/intl/generic.py)
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 import greetings.formal
 
 # %%
@@ -140,7 +126,7 @@ from greetings import informal
 # %%
 informal.say_hi("John")
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 from greetings.generic import say_hello, greet
 
 # %%
@@ -155,7 +141,7 @@ greet("Judy")
 # %%
 greet("Mrs. Brown")
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 import greetings.intl.generic
 
 # %%
@@ -170,7 +156,7 @@ gg.say_hello("John", "de")
 # %%
 gg.say_hello("John", "pt")
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 #  ### Finden von Packages
 #
@@ -180,13 +166,13 @@ gg.say_hello("John", "pt")
 #  - In den meisten Fällen ist es besser, keine komplizierten Operationen an
 #    `sys.path` vorzunehmen.
 
-# %% tags=["keep"]
+# %%
 import sys
 
 # %%
 sys.path
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 #  ### Das `import` statement
 #
@@ -201,7 +187,7 @@ sys.path
 #  - `d` kann ein Modul, ein Package oder ein Name (d.h. eine Variable, eine Funktion,
 #    eine Klasse, usw.) sein
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 #  ### Referenzen innerhalb eines Packages
 #
@@ -209,13 +195,13 @@ sys.path
 #  - `from .. import a` importiert `a` aus dem übergeordneten Package
 #  - `from .foo import a` importiert `a` aus dem "Geschwistermodul" `foo`
 
-# %% tags=["keep"]
+# %%
 # %pycat greetings/generic.py
 
-# %% tags=["keep"]
+# %%
 # %pycat greetings/intl/generic.py
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Workshop: Persönlicher Finanz-Tracker
 #
@@ -229,7 +215,7 @@ sys.path
 # Python-Paketverwaltung und Modulreferenzen zu demonstrieren.
 
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Problem- und Funktionsdomäne
 #
@@ -246,7 +232,7 @@ sys.path
 # 4. **Budgetanalyse:** Ausgaben und Einkommen vergleichen, um Budgets zu setzen und
 #    zu analysieren.
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Paket- und Modulstruktur
 #
@@ -266,7 +252,7 @@ sys.path
 #    - **Modul: `budget.py`**
 #      - Funktionen zum Erstellen und Analysieren von Budgets.
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Spezifikationen von Funktionen und Klassen
 #
@@ -286,7 +272,7 @@ sys.path
 #   - `create_budget()`
 #   - `compare_budget_to_actual()`
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Paketreferenzen und Abhängigkeiten
 #
@@ -304,7 +290,7 @@ sys.path
 # die Organisation von Funktionalität
 
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Programm
 #
@@ -329,13 +315,13 @@ sys.path
 # Stellen Sie sicher, dass die Funktionalität nur ausgeführt wird, wenn `main.py` direkt
 # ausgeführt wird (d.h. nicht, wenn das Modul `main` importiert wird).
 
-# %% tags=["keep"]
+# %%
 # !python -m finance.main
 
-# %% tags=["keep"]
+# %%
 # import finance.main
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Workshop-Ziel
 #
@@ -352,7 +338,7 @@ sys.path
 # Modulen liegt, müssen Sie die Funktionen nicht vollständig implementieren. Sie
 # können stattdessen Platzhalter verwenden, um die Funktionalität zu simulieren.
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Erwartetes Ergebnis
 #

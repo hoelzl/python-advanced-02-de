@@ -53,6 +53,7 @@ dependencies:
   - python-dotenv
   - requests
   - rise
+  - ruff
   - scikit-build
   - scikit-learn
   - scipy

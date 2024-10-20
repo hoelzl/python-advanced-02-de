@@ -1,18 +1,4 @@
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.15.2
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 # <div style="text-align:center; font-size:200%;">
 #  <b>Module und Packages</b>
@@ -23,7 +9,7 @@
 # <!-- 01 Module und Packages.py -->
 # <!-- python_courses/slides/module_180_modules_and_packages/topic_110_modules.py -->
 
-# %% [markdown] lang="de" tags=["slide"] slideshow={"slide_type": "slide"}
+# %% [markdown]
 #
 #  - Der Python Interpreter bietet nur einen kleinen Teil der für die meisten
 #    Programme benötigten Funktionalität
@@ -34,7 +20,7 @@
 #  - Durch *Module* und *Packages* kann diese Funktionalität bei Bedarf geladen
 #    werden.
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Module und Pakete
 #
@@ -44,7 +30,7 @@
 # - Ein *Paket* ist ein Verzeichnis mit Python-Code
 #   - Name des Pakets: Name des Verzeichnisses
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Hinweis
 #
@@ -57,7 +43,7 @@
 # - Das wird aber typischerweise nicht gemacht.
 # - Sie müssen aus dem Kontext erkennen, welche Art von Paket gemeint ist.
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Module und Pakete:
 #
@@ -65,7 +51,7 @@
 # - Sind Namensräume
 # - Zugriff auf Elemente mit `.`-Operator
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Importieren eines Moduls/Pakets
 #
@@ -79,7 +65,7 @@
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Verwenden der Funktionalität
 #
@@ -87,13 +73,13 @@
 
 # %%
 
-# %% [markdown] lang="de"
+# %% [markdown]
 #
 # - Auflisten des aktuellen Verzeichnisses:
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ### Ausgabe aller Namen im Modul
 #
@@ -108,7 +94,7 @@
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 #  Python bietet viele Standardmodule an, die mit dem Interpreter installiert
 #  werden:
@@ -125,7 +111,7 @@
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # Interne Darstellung von Code im Python-Interpreter:
 
@@ -133,7 +119,7 @@
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # ## Workshop: Laden von eingebauten Modulen
 #
@@ -149,7 +135,7 @@
 
 # %%
 
-# %% [markdown] lang="de" tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %% [markdown]
 #
 # Importieren Sie das `random`-Modul
 # - Verwenden Sie die `random`-Funktion aus diesem Modul, um eine Zufallszahl
@@ -163,7 +149,7 @@
 #     Zufallszahl ändert
 #   - Ist die Zufallszahl inklusive 1 und 6?
 
-# %% tags=["subslide"] slideshow={"slide_type": "subslide"}
+# %%
 
 # %%
 
